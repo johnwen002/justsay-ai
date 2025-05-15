@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { redirect, Form as RouterForm } from "react-router";
+import { toast } from "sonner";
 import { z } from "zod";
 import { StarsBackground } from "~/components/animate-ui/backgrounds/stars";
 import { Button } from "~/components/ui/button";
@@ -43,7 +44,7 @@ export default function SignupForm() {
         image: `https://api.dicebear.com/9.x/pixel-art/svg?seed=${generateRandomString(
           5
         )}`,
-        callbackURL: "/",
+        callbackURL: "/dashboard",
       },
 
       {
@@ -60,6 +61,7 @@ export default function SignupForm() {
         },
         onError: (ctx) => {
           console.log(ctx.error);
+          toast.error("ERROR" + ctx.error.message);
           setLoading(false);
         },
       }
