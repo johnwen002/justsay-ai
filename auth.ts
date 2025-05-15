@@ -9,7 +9,9 @@ export const auth = betterAuth({
   }),
   emailAndPassword: {
     enabled: true,
+    autoSignIn: false,
   },
+
   appName: "justsay-ai-frontend",
   plugins: [jwt()],
 });
