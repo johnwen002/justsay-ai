@@ -18,11 +18,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/avatar/, ""),
       },
-      // "/api": {
-      //   target: "http://localhost:8888",
-      //   changeOrigin: true,
-      //   rewrite: (path) => path.replace(/^\/api/, ""),
-      // },
+      "/service": {
+        target: "http://localhost:8888",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/service/, ""),
+      },
     },
   },
 });

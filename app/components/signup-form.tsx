@@ -69,7 +69,7 @@ export default function SignupForm() {
   }
 
   return (
-    <StarsBackground className="w-screen h-screen p-3 flex items-center justify-center">
+    <StarsBackground className="w-screen h-screen flex items-center justify-center overflow-hidden">
       <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
           Welcome
